@@ -29,6 +29,10 @@ describe('express', function () {
       .end()
       .then((text) => {
         expect(text).to.contain('Budget Tracker');
+        return nightmare.end();
+      })
+      .then(() => {
+        // nightmare is now ended
       })
   );
 
