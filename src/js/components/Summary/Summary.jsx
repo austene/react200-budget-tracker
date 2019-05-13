@@ -20,11 +20,11 @@ class Summary extends React.Component {
   render() {
     const { incomeItems, expenseItems } = this.props;
 
-    const incomeTotal = calculateSum(incomeItems) / 100;
-    const expenseTotal = calculateSum(expenseItems) / 100;
-    const difference = Math.round(incomeTotal - expenseTotal) / 100;
+    const incomeTotal = calculateSum(incomeItems);
+    const expenseTotal = calculateSum(expenseItems);
+    const difference = Math.round(incomeTotal - expenseTotal);
 
-    return(
+    return (
       <div className='card border-info mb-3'>
         <div className='card-header text-white bg-info'>Summary</div>
         <div className='card-body'>
@@ -35,7 +35,7 @@ class Summary extends React.Component {
                 <p>{ formatCurrency(incomeTotal) }</p>
               </div>
               <div className='col-6 text-center'>
-                <h6 className='h6 strong'>Total Expense</h6>
+                <h6 className='h6 strong'>Total Expenses</h6>
                 <p>{ formatCurrency(expenseTotal) }</p>
               </div>
             </div>
@@ -53,3 +53,4 @@ class Summary extends React.Component {
 }
 
 export default Summary;
+
