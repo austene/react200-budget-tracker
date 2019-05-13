@@ -1,5 +1,4 @@
 # react200-budget-tracker
-## - React/Redux Budget Tracker
 
 ## Purpose of Program
 Creates a simple budget tracker using REACT/REDUX for a React/Redux workshop.
